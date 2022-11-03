@@ -18,7 +18,7 @@ class DashboardController extends BaseController
     public function index()
     {
         $footballMatchs = FootballMatch::where('match_day', '<=', Carbon::now())->with(['predictResults'])->get();
-        $users = User::where('name', '<>', 1)->orderBy('name')->get();
+        $users = User::where('id', '<>', 1)->orderBy('name')->get();
         $userNames = [];
         $money = [];
         foreach ($users as $key => $value) {
