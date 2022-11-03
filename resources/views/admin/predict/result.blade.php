@@ -31,7 +31,7 @@ use Carbon\Carbon;
                                                 @sortablelink('match_day', 'match day')
                                             </th>
                                             <th class="text-center">
-                                                @sortablelink('country_1_name', 'country')
+                                                country
                                             </th>
                                             <th class="text-center" style="width:150px">
                                                 dự đoán
@@ -40,7 +40,7 @@ use Carbon\Carbon;
                                                 @sortablelink('result', 'kết quả')
                                             </th>
                                             <th class="text-center">
-                                                @sortablelink('country_2_name', 'country')
+                                                country
                                             </th>
                                         </tr>
                                     </thead>
