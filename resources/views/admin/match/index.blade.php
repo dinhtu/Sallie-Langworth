@@ -63,7 +63,7 @@ use Carbon\Carbon;
                                     </thead>
                                     <tbody>
                                         @foreach ($matchs as $match)
-                                            <tr>
+                                            <tr class="{{ Carbon::parse($match->match_day)->format('Y/m/d') == Carbon::now()->format('Y/m/d') ? 'row-success' : '' }}">
                                                 <td>
                                                     {{ Carbon::parse($match->match_day)->format('Y/m/d H:i') }}
                                                 </td>
