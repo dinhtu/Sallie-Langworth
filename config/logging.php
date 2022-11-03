@@ -117,6 +117,10 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+        'log_batch' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/batch/log_' . date('Ymd') . '.log'),
+        ],
     ],
 
 ];
