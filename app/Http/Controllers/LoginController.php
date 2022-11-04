@@ -56,7 +56,7 @@ class LoginController extends BaseController
             }
             return redirect($request->url_redirect ? $request->url_redirect : route('admin.dashboard.index'));
         }
-        return redirect('login.index', ['message' => 'メールアドレスとパスワードが一致しません。']);
+        return redirect(route('login.index', ['message' => 'メールアドレスとパスワードが一致しません。']));
     }
 
     public function logout()
