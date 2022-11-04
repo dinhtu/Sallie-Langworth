@@ -31,16 +31,16 @@ use Carbon\Carbon;
                                                 @sortablelink('match_day', 'match day')
                                             </th>
                                             <th class="text-center">
-                                                country
+                                                National Team A
                                             </th>
                                             <th class="text-center" style="width:150px">
                                                 dự đoán
                                             </th>
                                             <th class="text-center" style="width:150px">
-                                                @sortablelink('result', 'kết quả')
+                                                Score
                                             </th>
                                             <th class="text-center">
-                                                country
+                                                National Team B
                                             </th>
                                         </tr>
                                     </thead>
