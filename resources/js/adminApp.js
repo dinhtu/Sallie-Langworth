@@ -12,6 +12,8 @@ const app = createApp({});
 app.use(CoreuiVue);
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import CountUp from "vue-countup-v3";
+app.component("count-up", CountUp);
 app.use(VueSweetalert2);
 
 defineRule('password_rule', value => {

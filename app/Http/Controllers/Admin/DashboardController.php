@@ -39,7 +39,8 @@ class DashboardController extends BaseController
         return view('admin.dashboard.index', [
             'title' => 'ホー1ム',
             'userNames' => array_values($userNames),
-            'money' => array_values($money)
+            'money' => array_values($money),
+            'totalMoney' => collect(array_values($money))->sum()
         ]);
     }
 
