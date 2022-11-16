@@ -33,7 +33,7 @@ class MailNoti extends Command
     public function handle()
     {
         Log::channel('log_batch')->info('start batch MailNoti');
-        if (Carbon::now() <= Carbon::parse('2022/11/16') || Carbon::now() > Carbon::parse('2022/12/18')) {
+        if (Carbon::now() <= Carbon::parse('2022/11/15') || Carbon::now() > Carbon::parse('2022/12/18')) {
             return;
         }
         $users = User::get();
