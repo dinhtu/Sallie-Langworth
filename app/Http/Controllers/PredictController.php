@@ -62,7 +62,7 @@ class PredictController extends BaseController
                     $q->where('user_id', Auth::guard('admin')->user()->id);
                 }
             ]);
-        $matchs = $userBuilder->sortable(['match_day' => 'asc'])
+        $matchs = $userBuilder->sortable(['match_day' => 'desc'])
             ->select(['football_matchs.*', 'country_1.name as country_1_name', 'country_2.name as country_2_name'])->paginate($newSizeLimit);
         if ($this->checkPaginatorList($matchs)) {
             Paginator::currentPageResolver(function () {

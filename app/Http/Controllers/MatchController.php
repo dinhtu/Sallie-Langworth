@@ -24,7 +24,7 @@ class MatchController extends BaseController
         $newSizeLimit = $this->newListLimit($request);
         $userBuilder = FootballMatch::join('countries as country_1', 'country_1.id', '=', 'football_matchs.country_1')
             ->join('countries as country_2', 'country_2.id', '=', 'football_matchs.country_2');
-        $matchs = $userBuilder->sortable(['created_at' => 'desc'])
+        $matchs = $userBuilder->sortable(['match_day' => 'desc'])
             ->select(['football_matchs.*', 'country_1.name as country_1_name', 'country_2.name as country_2_name'])->paginate($newSizeLimit);
         if ($this->checkPaginatorList($matchs)) {
             Paginator::currentPageResolver(function () {
